@@ -1,0 +1,8 @@
+<div [formGroup]="quantityForm">
+<button *ngIf="!isQuantityAdded" class="btn btn-success" (click)="updateQuantity()">Add To Cart</button>
+<div *ngIf="isQuantityAdded" class="input-group" style="justify-content: center;margin: 0px;">
+  <input type="button" value="-" class="button-minus" data-field="quantity" (click)="updateQuantity('minus')">
+  <input type="number" step="1" max="" value="23" formControlName="quantity" name="quantity" class="quantity-field">
+  <input type="button" value="+" class="button-plus" data-field="quantity" (click)="updateQuantity('plus')">
+</div>
+</div>
